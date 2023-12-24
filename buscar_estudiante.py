@@ -1,3 +1,23 @@
+"""
+Este código en Python realiza lo siguiente:
+
+Función buscar_estudiante:
+
+Recibe cuatro diccionarios que representan información de diferentes estudiantes y el nombre de un estudiante a buscar.
+Comprueba si el nombre buscado está presente en alguno de los diccionarios proporcionados y retorna el diccionario 
+completo del estudiante si lo encuentra. Si no lo encuentra, retorna None.
+Programa principal:
+
+Define cuatro diccionarios, cada uno representando la información de un estudiante (nombre, código, género, carrera, 
+promedio, etc.).
+Solicita al usuario ingresar el nombre de un estudiante.
+Utiliza la función buscar_estudiante con los diccionarios de los estudiantes y el nombre ingresado para buscar al estudiante.
+Si el estudiante existe, muestra su código; si no existe, imprime un mensaje indicando que el estudiante no está en 
+el sistema.
+Este código permite buscar información de un estudiante en particular a partir de su nombre, usando 
+diccionarios que contienen los detalles de varios estudiantes.
+"""
+
 # -*- coding: utf-8 -*-
 def buscar_estudiante(est1:dict,est2:dict,est3:dict,est4:dict,nom:str)->dict:
     buscado = None

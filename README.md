@@ -1,4 +1,4 @@
-# Repositorio de Ejercicios de Programación
+# Repositorio de ejercicios de programación
 Bienvenido al Repositorio de Ejercicios de Programación, un espacio dedicado al aprendizaje 
 y desarrollo de habilidades en el arte de la programación.
 

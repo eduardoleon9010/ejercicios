@@ -1,5 +1,5 @@
 # Repositorio de ejercicios de programación
-Bienvenido al Repositorio de Ejercicios de Programación, un espacio dedicado al aprendizaje 
+Bienvenido al repositorio de ejercicios de programación, un espacio dedicado al aprendizaje 
 y desarrollo de habilidades en el arte de la programación.
 
 Este repositorio se erige como un compendio educativo que abarca una extensa variedad de 

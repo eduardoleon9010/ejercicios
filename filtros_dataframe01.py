@@ -9,6 +9,7 @@ datos en términos de distancia geográfica.
 import pandas as pd
 import math
 
+# Cargar datos de peajes desde un archivo CSV
 peajes = pd.read_csv("peajes.csv", sep=";")
 
 def calcular_peaje_cercano(peajes:pd.DataFrame)->None:
@@ -31,8 +32,8 @@ def calcular_peaje_cercano(peajes:pd.DataFrame)->None:
                     
         distancias.append(min_distancia)
         cercanos.append(mas_cerca)
-    print(len(cercanos))
-    peajes['MAS_CERCANO'] = distancias
+        
+    peajes['MAS_CERCANO'] = cercanos
     peajes['DIST_MAS_CERCA'] = distancias
     
 def calcular_distancia_tierra(t1:float, g1:float, t2:float, g2:float)->float:
@@ -43,9 +44,13 @@ def calcular_distancia_tierra(t1:float, g1:float, t2:float, g2:float)->float:
     dist = 6371.01 * math.acos(math.sin(t1_rad) * math.sin(t2_rad) + math.cos(t1_rad) * math.cos(t2_rad) * math.cos(g1_rad - g2_rad))
     return round(dist, 2)
 
+# Calcular el peaje más cercano para cada peaje
 calcular_peaje_cercano(peajes)
+
+# Filtrar peajes de Cundinamarca y mostrar algunos resultados
 filtro = peajes[peajes['DEP'] == 'Cundinamarca']
 print(filtro[['NOMBRE', 'MAS_CERCANO', 'DIST_MAS_CERCA']].iloc[5:10])
+
 
 """
 Uso y Funcionalidad

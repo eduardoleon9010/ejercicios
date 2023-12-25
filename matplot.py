@@ -1,8 +1,6 @@
-# -*- coding: utf-8 -*-
 """
-Created on Fri Mar  4 17:21:39 2022
-
-@author: USUARIO
+Este código genera datos aleatorios de notas para un conjunto de estudiantes y luego realiza tres tipos de 
+gráficos diferentes utilizando Matplotlib.
 """
 
 import random
@@ -40,3 +38,10 @@ plt.ylabel("Nota")
 plt.xlabel("ID estudiante")
 plt.xticks(rotation=90)
 plt.show()
+
+"""
+Este código genera y visualiza datos simulados de notas de estudiantes. El primer gráfico muestra la 
+evolución de las notas a lo largo de los IDs de los estudiantes. El segundo gráfico es un histograma 
+que representa la cantidad de estudiantes en diferentes rangos de notas. El tercer gráfico es un 
+gráfico de dispersión que muestra las notas individuales de cada estudiante en función de sus IDs.
+"""

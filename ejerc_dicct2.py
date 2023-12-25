@@ -1,5 +1,21 @@
-# -*- coding: utf-8 -*-
+"""
+Este script resuelve ecuaciones cuadráticas de la forma y = ax**2 + bx + c y las imprime. Utiliza la fórmula 
+cuadrática para encontrar las soluciones reales de la ecuación.
 
+solucionar_cuadratica(a, b, c): Esta función toma los coeficientes de una ecuación cuadrática y calcula las 
+soluciones reales. Primero, calcula el determinante, y si este es mayor o igual a cero (lo que indica que hay 
+soluciones reales), aplica la fórmula cuadrática para encontrar las soluciones.
+
+imprimir_soluciones(soluciones): Imprime las soluciones de una ecuación cuadrática o un mensaje si no hay 
+soluciones reales.
+
+El script también incluye ejemplos de uso de estas funciones:
+
+Calcula e imprime las soluciones de una ecuación sin soluciones reales, y muestra un mensaje indicando que no 
+hay soluciones reales para esa ecuación.
+Calcula e imprime las soluciones de una ecuación con dos soluciones reales diferentes.
+
+"""
 import math
 def solucionar_cuadratica(a: int, b: int, c:int) -> tuple:
     """ Encuentra las soluciones reales de una ecuación cuadrática de la forma

@@ -1,4 +1,11 @@
-# -*- coding: utf-8 -*-
+"""
+Gestor de Información de Celulares
+Descripción
+Este conjunto de funciones en Python permite crear, gestionar y comparar información de celulares. 
+Incluye funciones para crear diccionarios que representan celulares con sus especificaciones técnicas, 
+comparar las cámaras de dos celulares, verificar la existencia de ciertas versiones de sistemas 
+operativos en los celulares, y obtener información sobre los celulares mediante sus nombres
+"""
 def crear_celular(procesador: float, memoria: float, camara: float, 
                   pantalla: str, ancho: int, alto: int, pila: float, 
                   sistema: str, version: str)->dict:
@@ -148,16 +155,27 @@ def mejor_camara_con_nombres(celulares: dict, nombre1: str, nombre2: dict)-> str
             nombre_mejor = nombre2
     return nombre_mejor
 
+# Ejemplos de uso de las funciones
 print(mejor_camara_con_nombres(celulares, 'DumbCel', 'BoringCel'))
-
 print(mejor_camara_con_nombres(celulares, 'DumbCel', 'FalseCel'))
-
 print(mejor_camara_con_nombres(celulares, 'FalsestCel', 'FalseCel'))
-
 print(mejor_camara_con_nombres(celulares, 'CheapCel', 'CheapCel'))
 
 
 
+"""
+Funciones Principales
+crear_celular: Crea un diccionario que representa un celular con sus especificaciones técnicas.
+mejor_camara: Compara las cámaras de dos celulares y devuelve cuál tiene la mejor cámara.
+hay_celular_version_so: Verifica si hay algún celular con una versión específica de sistema operativo.
+contar_celulares_version_so: Cuenta cuántos celulares tienen una versión específica de sistema operativo.
+mejor_camara_con_nombres: Compara las cámaras de dos celulares mediante sus nombres.
+
+Uso y Notas Adicionales
+Este código puede ser utilizado para gestionar información sobre celulares. Las funciones permiten comparar 
+características específicas de los celulares, verificar la existencia de ciertas versiones de sistemas 
+operativos y obtener información detallada mediante los nombres de los celulares.
+"""
 
 
 

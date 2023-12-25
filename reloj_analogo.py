@@ -1,11 +1,31 @@
-# -*- coding: utf-8 -*-
 """
-Created on Mon May  9 09:00:20 2022
+Este código en Python utiliza la biblioteca OpenGL para crear un reloj analógico 2D con una ventana gráfica interactiva. 
+Aquí está lo que hace:
 
-@author: USUARIO
+Importaciones de bibliotecas: Importa las bibliotecas necesarias de OpenGL (OpenGL.GL, OpenGL.GLUT, OpenGL.GLU) y datetime.
+
+Inicialización de variables globales: Establece variables globales i, j, y k en 0.0.
+
+Función initGL: Inicializa la ventana gráfica. Obtiene la hora actual y asigna los segundos, minutos y horas a i, j, y k 
+respectivamente. Establece el color de fondo usando glClearColor.
+
+Función disp: Esta función dibuja la interfaz gráfica del reloj. Usa comandos OpenGL para dibujar las manecillas del 
+reloj (segundos, minutos y horas) y el marco del reloj.
+
+Cada manecilla está representada como una línea con su respectivo color y tamaño, rotada según los segundos, minutos 
+y horas obtenidos previamente.
+También dibuja el contorno del reloj.
+Función main: Inicializa la ventana GLUT, define su tamaño y título, llama a initGL para inicializar los gráficos, 
+define disp como la función de renderizado y ejecuta el bucle principal de la interfaz gráfica con glutMainLoop.
+
+Llamada a la función main: Inicia la ejecución del programa.
+
+Este código crea una ventana gráfica utilizando OpenGL que muestra un reloj analógico 2D en tiempo real, 
+donde las manecillas se actualizan cada segundo para reflejar la hora actual del sistema.
+
+
 """
 
-# @autor: Eduardo Leon
 
 import OpenGL
 from OpenGL.GL import *

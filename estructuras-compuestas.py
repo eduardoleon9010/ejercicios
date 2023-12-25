@@ -1,4 +1,15 @@
-# -*- coding: utf-8 -*-
+"""
+Creación de una Figura mediante un Diccionario
+Descripción
+Esta función en Python, crear_figura, permite crear un diccionario que representa una 
+figura con atributos específicos. Toma como parámetros la posición (coordenadas x e y 
+de la esquina) y el tamaño (ancho y alto) de la figura. Retorna un diccionario con 
+las siguientes llaves: pos, tamanho, esquina, grosor, color_interno, color_linea y 
+rotacion, donde los últimos cinco atributos tienen valores predeterminados.
+
+Código de Ejemplo
+"""
+
 def crear_figura(posicion: tuple, tamano: tuple)->dict:
     """ Crear una nueva fugura a  partir de los parametros recibidos
 
@@ -27,5 +38,4 @@ def crear_figura(posicion: tuple, tamano: tuple)->dict:
     nueva_figura["rotacion"] = (0, 0, 0)
     
     return nueva_figura
-
 

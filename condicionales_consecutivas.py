@@ -11,7 +11,7 @@ if (num2 % 2 == 0):
     cuantos += 1
 if (num3 % 2 == 0):
     cuantos += 1
-print ("De los tres numeros digitaso hay", cuantos, "pares" )
+print ("De los tres numeros digitados hay", cuantos, "pares" )
 
 
 

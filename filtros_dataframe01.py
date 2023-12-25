@@ -1,8 +1,9 @@
-# -*- coding: utf-8 -*-
 """
-Created on Sat Mar  5 19:02:30 2022
-
-@author: USUARIO
+Cálculo del Peaje más Cercano
+Descripción
+Este script utiliza la biblioteca Pandas en Python para cargar un archivo CSV que contiene información sobre peajes. 
+Luego, realiza un cálculo para determinar el peaje más cercano a cada uno de los peajes existentes en la base de 
+datos en términos de distancia geográfica.
 """
 
 import pandas as pd
@@ -46,8 +47,14 @@ calcular_peaje_cercano(peajes)
 filtro = peajes[peajes['DEP'] == 'Cundinamarca']
 print(filtro[['NOMBRE', 'MAS_CERCANO', 'DIST_MAS_CERCA']].iloc[5:10])
 
+"""
+Uso y Funcionalidad
+El código calcula el peaje más cercano para cada peaje en la base de datos. Para ello, emplea una fórmula de 
+cálculo de distancia geográfica entre puntos en la superficie terrestre. Luego, muestra información específica 
+sobre peajes ubicados en Cundinamarca, incluyendo el nombre del peaje más cercano y la distancia a este peaje cercano.
 
-
-
+Este proceso es útil para analizar la ubicación de los peajes y entender su proximidad geográfica con respecto 
+a otros peajes en la base de datos.
+"""
                 
                 

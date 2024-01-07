@@ -1,26 +1,19 @@
-"""
-Este script en Python utiliza las librerías Pandas y Matplotlib para crear diagramas de caja 
- ("boxplots") para diferentes categorías de tarifas ('CAT1' a 'CAT7') según la columna 'DEP' 
-(departamento) de un conjunto de datos leído desde un archivo CSV llamado 'peajes.csv'. 
-El script lee los datos, realiza un preprocesamiento en la columna 'DEP' para reemplazar 
-valores específicos, y genera un diagrama de caja para cada categoría de tarifa por departamento. 
-La visualización resultante muestra la distribución de los valores de tarifas en los departamentos 
-para cada categoría.
-"""
-
 import pandas as pd
 import matplotlib.pyplot as plt
 
+# Lectura del archivo CSV y preprocesamiento de datos
 peajes = pd.read_csv('peajes.csv', sep=";")
 peajes['DEP'] = peajes['DEP'].replace(to_replace="<Null>", value='Otro')
 peajes['DEP'] = peajes['DEP'].replace(to_replace="ANTIQUIA", value='Antioquia')
 
-# Con subplots
+# Selección de columnas relevantes para el análisis
 tarifa_departamento = peajes[['DEP', 'CAT1', 'CAT2', 'CAT3', 'CAT4',
                               'CAT5', 'CAT6', 'CAT7']]
 
+# Creación de diagramas de caja por categoría de tarifa y departamento
 grafica = tarifa_departamento.boxplot(by="DEP", rot=90, figsize=(10, 6))
 
+# Personalización de los gráficos generados
 k = 1
 for elemento in grafica:
     for i in elemento:
@@ -30,3 +23,4 @@ for elemento in grafica:
         k += 1
 
 plt.show()
+

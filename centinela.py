@@ -1,36 +1,23 @@
+# -*- coding: utf-8 -*-
 """
-Este código tiene como objetivo contar la cantidad de dígitos que tiene un número entero ingresado por el usuario.
+Created on Thu Feb  1 08:44:28 2024
 
-La función contar_digitos toma un número entero como argumento y utiliza un bucle while para contar los dígitos del número.
-
-Comienza inicializando un contador en cero y una bandera terminar como False.
-Luego, entra en un bucle while que se ejecutará hasta que terminar sea True.
-Dentro del bucle, comprueba si el número es igual a cero. Si lo es, asigna True a terminar, lo que detiene el bucle.
-Si el número no es cero, incrementa el contador en uno y divide el número entre 10 usando la operación //=, lo que descarta
-el último dígito del número en cada iteración.
-Cuando el número llega a cero, se establece la bandera terminar en True y el bucle termina.
-Por último, la función devuelve el valor del contador, que representa la cantidad de dígitos en el número ingresado.
-En el programa principal, se solicita al usuario que ingrese un número entero, luego se llama a la función contar_digitos 
-pasando el número ingresado como argumento y se imprime la cantidad de dígitos que tiene ese número en la pantalla.
+@author: USUARIO
 """
 
-def contar_digitos(numero:int)->int:
-    contador = 0
-    terminar = False
+# Inicializamos la variable suma en 0
+suma = 0
+
+# Solicitamos al usuario ingresar un número
+numero = int(input("Ingrese un número (o 0 para finalizar): "))
+
+# Bucle while que se ejecuta mientras el número ingresado sea diferente de 0
+while numero != 0:
+    # Sumamos el número al acumulador 'suma'
+    suma += numero
     
-    while terminar == False:
-        if numero == 0:
-            terminar = True
-            
-        else:
-            contador += 1
-            numero //= 10
-            
-    return contador
+    # Solicitamos al usuario ingresar otro número o 0 para finalizar
+    numero = int(input("Ingrese otro número (o 0 para finalizar): "))
 
-num = int(input("Ingrese un numero entero: "))
-digitos = contar_digitos(num)
-print("La cantidad de digitos del numero es",digitos)
-
-
-                
+# Fuera del bucle, imprimimos la suma total de los números ingresados
+print("La suma total es:", suma)
